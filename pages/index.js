@@ -13,7 +13,6 @@ export default function Index({octocats}) {
         <meta name="description" content="Octodex RRS Feed Renderer"/>
         <link rel="icon" href="/favicon.ico"/>
       </Head>
-
       <OctodexHeader />
       <Octocats octocats={octocats}/>
       <OctodexFooter />

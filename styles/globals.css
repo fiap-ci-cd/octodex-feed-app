@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 html,
+
 body {
   padding: 0.5em;
   margin: 0.5em;
