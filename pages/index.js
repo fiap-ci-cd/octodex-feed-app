@@ -4,19 +4,20 @@ import Octocats from '../components/octocats'
 import {Container} from "@mui/material";
 import OctodexHeader from "../components/octodexHeader";
 import OctodexFooter from "../components/octodexFooter";
+import { Html } from 'next/document';
 
 export default function Index({octocats}) {
   return (
-    <Container>
-      <Head>
-        <title>GitHub Octodex Renderer</title>
-        <meta name="description" content="Octodex RRS Feed Renderer"/>
-        <link rel="icon" href="/favicon.ico"/>
-      </Head>
-      <OctodexHeader />
-      <Octocats octocats={octocats}/>
-      <OctodexFooter />
-    </Container>
+        <Container>
+          <Head>
+            <title>GitHub Octodex Renderer</title>
+            <meta name="description" content="Octodex RRS Feed Renderer"/>
+            <link rel="icon" href="/favicon.ico"/>
+          </Head>
+          <OctodexHeader />
+          <Octocats octocats={octocats}/>
+          <OctodexFooter />
+        </Container>
   )
 }
 

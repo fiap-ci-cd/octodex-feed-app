@@ -34,7 +34,7 @@ export default function Octocat({
   };
 
   return (
-      <Grid item>
+      <Grid item xs={8} md={4}>
         <Card variant="outlined" className="octocat">
           <CardContent>
             <CardActionArea onClick={handleClickOpen}>

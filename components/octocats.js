@@ -1,11 +1,8 @@
 import Octocat from "./octocat";
 import {Grid} from "@mui/material";
-import Head from "next/head";
-import useDarkMode from "../lib/useDarkMode";
 
 export default function Octocats({octocats}) {
 
-  const [colorTheme, setTheme] = useDarkMode();
   return (
     <Grid
       container

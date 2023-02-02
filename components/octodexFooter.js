@@ -16,7 +16,7 @@ export default function OctodexFooter() {
           </Typography>
         </Grid>
 
-        <Grid item>
+        <Grid item class="dark:text-gray-100 text-gray-900">
           <Link href={"https://nextjs.org/"}>
             Powered by Vercel Next.js
           </Link>
