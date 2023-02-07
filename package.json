@@ -22,10 +22,15 @@
     "sharp": "^0.31.2"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
     "autoprefixer": "^10.4.13",
+    "esbuild": "^0.17.6",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
     "postcss": "^8.4.21",
+    "semantic-release": "^20.1.0",
+    "semantic-release-github-actions-tags": "^1.0.3",
     "tailwindcss": "^3.2.4"
   }
 }
