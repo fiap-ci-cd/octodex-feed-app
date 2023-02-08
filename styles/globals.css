@@ -11,13 +11,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-
-[data-theme='light'],
-[data-theme='light'] body {
-  color: #fff;
-  background: #000;
-}
-
 a {
   color: inherit;
   text-decoration: none;
