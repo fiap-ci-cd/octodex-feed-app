@@ -45,9 +45,6 @@ export default function OctodexHeader() {
               GitHub Octodex RSS Feed
             </Typography>
           </Grid>
-          <SunIcon className="w-10 h-10 text-yellow-500 " role="button" onClick={() => setTheme('light')} />
-          <MoonIcon className="w-10 h-10 text-gray-900 " role="button" onClick={() => setTheme('dark')} /> */}
-          {/* renderThemeChanger */}
         </Grid>
       </Box>
   )
