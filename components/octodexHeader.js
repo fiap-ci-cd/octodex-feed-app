@@ -1,6 +1,5 @@
 import Image from "next/image";
 import {Box, Grid, Typography} from "@mui/material";
-import {MoonIcon, SunIcon} from "@heroicons/react/solid";
 
 const iconSize = 64;
 
