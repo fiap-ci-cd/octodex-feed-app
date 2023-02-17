@@ -5,8 +5,6 @@ const iconSize = 64;
 
 export default function OctodexHeader() {
 
-  console.log("OctodexHeader flags: ", flags);
-
   return (
       <Box className="header">
         <Grid container spacing={2}>
