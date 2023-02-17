@@ -36,3 +36,13 @@ yarn-error.log*
 # IntelliJ IDEA
 .idea
 *.iml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.*
+.terraform/
+.terraform.lock.hcl
+plan.out
+
