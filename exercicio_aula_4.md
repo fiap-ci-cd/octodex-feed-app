@@ -18,12 +18,14 @@ Substitua `{subscription-id}` pelo seu subscription id.
 
 :attention: O seu 'Subscription ID' pode ser encontrado no portal da Azure, na aba 'Subscriptions'.
 
-<!-- 5. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado. -->
+5. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado.
 
-5. Copie o valor de `appId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
+6. Copie o valor de `appId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
 
-6. Copie o valor de `password` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
+7. Copie o valor de `password` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
 
-7. Copie o valor de `tenant` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
+8. Copie o valor de `tenant` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
 
-8. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
+9. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
+
+10. Delete o resource group já criado para verificar o terraf
