@@ -2,7 +2,7 @@
 
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App using Terraform
+name: Deploy Azure WebApp resources using Terraform
 
 on:
   workflow_dispatch:
