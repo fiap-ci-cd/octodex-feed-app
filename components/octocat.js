@@ -35,7 +35,7 @@ export default function Octocat({
 
   return (
       <Grid item xs={8} md={4}>
-        <Card variant="outlined" className="octocat">
+        <Card variant="outlined" className="octocat dark:bg-gray-600">
           <CardContent>
             <CardActionArea onClick={handleClickOpen}>
               <CardMedia
@@ -46,13 +46,13 @@ export default function Octocat({
                 title={name}/>
             </CardActionArea>
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">{name}</Typography>
+                <Typography gutterBottom variant="h5" component="h2" className="dark:text-gray-300">{name}</Typography>
 
-                <Typography variant="body1" color="textSecondary" component="p">
+                <Typography variant="body1" color="textSecondary" component="p" className="dark:text-gray-300">
                   {snippet}
                 </Typography>
 
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body2" color="textSecondary" component="p" className="dark:text-gray-300">
                   {published}
                 </Typography>
               </CardContent>
