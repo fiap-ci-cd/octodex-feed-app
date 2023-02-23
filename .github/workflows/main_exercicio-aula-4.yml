@@ -2,7 +2,7 @@
 
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - exercicio-aula-4
+name: Deploy Node.js app resources to Azure - exercicio-aula-4
 
 on:
   push:

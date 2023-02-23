@@ -2,7 +2,7 @@
 
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Destroy Azure Web App using Terraform
+name: Destroy Azure Web App resources using Terraform
 
 on:
   workflow_dispatch:
