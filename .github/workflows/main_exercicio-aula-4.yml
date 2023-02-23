@@ -2,12 +2,9 @@
 
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Deploy Node.js app resources to Azure - exercicio-aula-4
+name: Deploy Node.js app to Azure - exercicio-aula-4
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -20,7 +17,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '18.x'
+          node-version: '16.x'
 
       - name: npm install, build, and test
         run: |
@@ -54,7 +51,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'exercicio-aula-3'
+          app-name: 'exercicio-aula-04'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
           package: .
