@@ -24,15 +24,15 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Terraform install
-        uses: hashicorp/setup-terraform@v1
-        with:
-          terraform_version: 0.14.7
-
       - name: Move into Terraform folder
         run: |
           cd terraform
           ls -l
+
+      - name: Terraform install
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.14.7
 
       - name: Terraform init
         run: terraform init
