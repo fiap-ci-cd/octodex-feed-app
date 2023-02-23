@@ -1,6 +1,6 @@
 variable "resource_group_name" {
   type    = string
-  default = "exercicio-ci-cd-fiap"
+  default = "exercicio-aula-04"
   nullable = false
 }
 
