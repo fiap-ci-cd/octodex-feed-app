@@ -26,7 +26,8 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - run: |
+      - run:
+          cd terraform
           pwd
           ls -l
 
