@@ -28,4 +28,8 @@ Substitua `{subscription-id}` pelo seu subscription id.
 
 9. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
 
-10. Delete o resource group já criado para verificar o terraf
+## Ajustando o arquivo de configuração do Terraform
+
+1. Na pasta `terraform`, abra o arquivo `vars.tf` e substitua o valor default da variável `resource_group_name` por `exercicio-ci-cd-aula-04-{seu-usuario-github}`.
+
+2. Substitua também o valor default da variável `app_service_name` por `exercicio-ci-cd-aula-04-{seu-usuario-github}`.
