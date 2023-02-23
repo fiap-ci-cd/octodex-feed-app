@@ -26,6 +26,10 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - run: |
+          pwd
+          ls -l
+
       - name: Terraform install
         uses: hashicorp/setup-terraform@v2.0.3
         with:
