@@ -47,11 +47,14 @@ jobs:
         with:
           name: node-app
 
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'exercicio-aula-04'
           slot-name: 'production'
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-          package: .
+          package: ./node-app.zip

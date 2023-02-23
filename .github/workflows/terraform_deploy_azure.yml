@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     defaults:
       run:
         working-directory: ${{ env.TF_WORKING_DIR }}
@@ -59,3 +58,4 @@ jobs:
       - name: Terraform apply
         id: apply
         run: terraform apply -auto-approve
+        continue-on-error: true
