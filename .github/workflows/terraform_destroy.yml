@@ -14,6 +14,9 @@ jobs:
     environment:
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -23,5 +26,5 @@ jobs:
         with:
           terraform_version: 0.14.7
 
-      - name: Terraform destroy
-        run: terraform destroy -auto-approve
+      - name: Move into Terraform folder
+        run: cd terraform
