@@ -19,18 +19,15 @@ jobs:
 
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          working-directory:  ./terraform
 
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Move into Terraform folder
-        run: |
-          cd terraform
-          ls -l
-
       - name: Terraform install
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v2.0.3
         with:
           terraform_version: 0.14.7
 
