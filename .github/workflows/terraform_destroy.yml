@@ -2,18 +2,16 @@
 
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App using Terraform
+name: Destroy Azure Web App using Terraform
 
 on:
   workflow_dispatch:
 
 jobs:
 
-  deploy:
+  destroy:
     runs-on: ubuntu-latest
     environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
       - uses: azure/login@v1
@@ -25,11 +23,5 @@ jobs:
         with:
           terraform_version: 0.14.7
 
-      - name: Terraform init
-        run: terraform init
-
-      - name: Terraform plan
-        run: terraform plan
-
-      - name: Terraform apply
-        run: terraform apply -auto-approve
+      - name: Terraform destroy
+        run: terraform destroy -auto-approve

@@ -2,7 +2,7 @@
 
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - exercicio-aula-3
+name: Build and deploy Node.js app to Azure Web App - exercicio-aula-4
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
-      
+
       - name: Zip file
         run: zip -r node-app.zip .
 

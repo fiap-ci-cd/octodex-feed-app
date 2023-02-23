@@ -46,24 +46,27 @@ resource "azurerm_linux_web_app" "webapp" {
     application_stack {
       node_version = "16-lts"
     }
-    # zip_deploy_file = "../app.zip"
   }
 }
 
 resource "azurerm_linux_web_app_slot" "webapp" {
   name           = "dark-mode"
   app_service_id = azurerm_linux_web_app.webapp.id
+  app_settings = {
+    "WEBSITE_RUN_FROM_PACKAGE" = "1"
+  }
 
   site_config {
-    # zip_deploy_file = "../app.zip"
+    application_stack {
+      node_version = "16-lts"
+    }
   }
 }
 
 #  Deploy code from a public GitHub repo
 resource "azurerm_app_service_source_control" "sourcecontrol" {
   app_id             = azurerm_linux_web_app.webapp.id
-  repo_url           = "https://github.com/Azure-Samples/nodejs-docs-hello-world"
-  branch             = "master"
+  repo_url           = "https://github.com/fiap-ci-cd/octodex-feed-app"
+  branch             = "main"
   use_manual_integration = true
-  use_mercurial      = false
 }
