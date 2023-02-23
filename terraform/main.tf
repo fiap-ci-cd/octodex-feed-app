@@ -6,7 +6,7 @@ terraform {
       version = "~> 3.0.0"
     }
   }
-  # required_version = ">= 0.14.9"
+  required_version = ">= 0.14.9"
 }
 provider "azurerm" {
   features {}
@@ -52,9 +52,6 @@ resource "azurerm_linux_web_app" "webapp" {
 resource "azurerm_linux_web_app_slot" "webapp" {
   name           = "dark-mode"
   app_service_id = azurerm_linux_web_app.webapp.id
-  app_settings = {
-    "WEBSITE_RUN_FROM_PACKAGE" = "1"
-  }
 
   site_config {
     application_stack {
@@ -68,5 +65,5 @@ resource "azurerm_app_service_source_control" "sourcecontrol" {
   app_id             = azurerm_linux_web_app.webapp.id
   repo_url           = "https://github.com/fiap-ci-cd/octodex-feed-app"
   branch             = "main"
-  use_manual_integration = true
+  use_manual_integration = false
 }
