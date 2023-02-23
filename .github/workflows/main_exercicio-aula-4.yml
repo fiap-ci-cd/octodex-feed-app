@@ -55,6 +55,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'dark-mode'
+          app-name: 'octodex'
           slot-name: 'production'
           package: ./node-app.zip

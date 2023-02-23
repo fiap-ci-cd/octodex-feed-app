@@ -28,11 +28,9 @@ Substitua `{subscription-id}` pelo seu subscription id.
 
 9. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
 
-## Ajustando o arquivo de configuração do Terraform
+## Ajustando o seu workflow
 
-1. Na pasta `terraform`, abra o arquivo `vars.tf` e substitua o valor default da variável `resource_group_name` por `exercicio-ci-cd-aula-04-{seu-usuario-github}`.
-
-2. Substitua também o valor default da variável `app_service_name` por `exercicio-ci-cd-aula-04-{seu-usuario-github}`.
+Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linha 58)** de `octodex` para o nome aleatório gerado pelo Terraform
 
 ## Configurando seu repositório para executar Actions
 
