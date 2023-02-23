@@ -55,6 +55,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'octodex'
+          app-name: 'exercicio-04-pUvQuKYK8BS9bqoH'
           slot-name: 'production'
           package: ./node-app.zip
