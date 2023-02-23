@@ -55,6 +55,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'exercicio-aula-04'
+          app-name: 'dark-mode'
           slot-name: 'production'
           package: ./node-app.zip

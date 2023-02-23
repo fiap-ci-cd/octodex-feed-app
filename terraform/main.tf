@@ -12,19 +12,10 @@ provider "azurerm" {
   features {}
 }
 
-# data "external" "existing_resource_group" {
-#     program = ["/bin/bash","./exist_resource.sh"]
-
-#     query = {
-#         group_name = var.resource_group_name
-#     }
-# }
-
 # Create the resource group
 resource "azurerm_resource_group" "rg" {
-  # count    = data.external.existing_resource_group.result.exists == "true" ? 0 : 1
   name     = var.resource_group_name
-  location = "eastus"
+  location = var.location
 }
 
 # Create the Linux App Service Plan

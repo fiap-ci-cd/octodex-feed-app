@@ -33,3 +33,7 @@ Substitua `{subscription-id}` pelo seu subscription id.
 1. Na pasta `terraform`, abra o arquivo `vars.tf` e substitua o valor default da variável `resource_group_name` por `exercicio-ci-cd-aula-04-{seu-usuario-github}`.
 
 2. Substitua também o valor default da variável `app_service_name` por `exercicio-ci-cd-aula-04-{seu-usuario-github}`.
+
+## Configurando seu repositório para executar Actions
+
+Vá na aba de `Actions` do seu repositório e clique em _'I understand my workflows, go ahead and enable them'_.
