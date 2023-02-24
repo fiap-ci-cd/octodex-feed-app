@@ -32,46 +32,52 @@ Substitua `{subscription-id}` pelo seu subscription id.
 
 <img width="373" alt="image" src="https://user-images.githubusercontent.com/609076/221066635-30561393-b467-4d9a-9d4f-29346dba0233.png">
 
+4. Aguarde a execução acompanhando os logs
 
 ## Ajustando o seu workflow
 
 Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linhas 66 e 93)** de `octodex` para o nome aleatório gerado pelo Terraform
-- Você pode ver o nome do seu app nos logs da execução de Actions ou fazendo login na Azure
+- Você pode ver o nome do seu app nos logs da execução de Actions ou fazendo login na Azure. O nome será algo parecido com `exercicio-04-g4qKK0yDGDHdfLyA`
 
 ## Colocando uma mudança em teste
 
-1. Para fazer o exercício você vai precisar criar um Codespaces. Na aba `Code`, clique no botão verde 'Code', e em seguida na aba 'Codespaces', clique no ícone de `+`.
+1. Para fazer o exercício você vai precisar criar um Codespaces. Na aba `Code`, clique no botão verde 'Code', e em seguida na aba 'Codespaces', clique no botão verde `Create codespace on main`.
 2. Você verá que uma nova aba será aberta e, após carregar, o Visual Studio Code será aberto.
 3. No canto superior esquerdo, clique no ícone do menu (ícone com três barras horizontais paralelas), vá em `Terminal` > `New Terminal`.
 4. Um terminal aparecerá na parte inferior direita da sua tela. Execute o seguinte comando:
 ```bash
 npm run dev
 ```
-5. Após os logs, clique no link (CTRL+clique) `https://localhost:3000`.
+5. Após os logs, clique no link (CTRL+clique) `https://localhost:3000`. Ou no botão verde que aparecerá no canto inferior direito `Open in Browser`, como na imagem abaixo:
+
+<img width="463" alt="image" src="https://user-images.githubusercontent.com/609076/221071316-60ae4664-862c-4e7a-9e53-cd101da10f0d.png">
 
 Essa é a aplicação com a qual queremos trabalhar. Se você utilizar o seu computador em modo noturno, ela terá o fundo escuro, caso utilize no modo claro, ela terá o fundo branco. O que queremos fazer, é dar ao usuário a opção de escolher, manualmente, qual modo deseja usar. Por isso vamos fazer uma modificação no código.
 
 Todo o código necessário já está pronto. Para isso, basta executar uma tarefa do VS Code.
 
-6. No mesmo menu superior esquerdo, selectione `Terminal` > `Run task...`.
-7. No centro da tela, na parte superior, aparecerá um campo de input. Selecione a opção `code dark mode toggle`.
-8. Em seguida aparecerá a opção para você inserir o nome do branch que será criado automaticamente. Virá preenchido automaticamente `dark-mode`. Apenas aperte `Enter`.
-9. Execute novamente o comando do passo 4. E veja que apareceu um ícone após o cabeçalho. Clique no ícone e veja o estilo do app ser alterado.
+1. No mesmo menu superior esquerdo, selectione `Terminal` > `Run task...`.
+2. No centro da tela, na parte superior, aparecerá um campo de input. Selecione a opção `code dark mode toggle`.
+3. Em seguida aparecerá a opção para você inserir o nome do branch que será criado automaticamente. Virá preenchido automaticamente `dark-mode`. Apenas aperte `Enter`.
+4. Execute novamente o comando do passo 4. E veja que apareceu um ícone após o cabeçalho. Clique no ícone e veja o estilo do app ser alterado.
 ```bash
 npm run dev
 ```
-10. Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
+5.  Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
 <img width="58" alt="image" src="https://user-images.githubusercontent.com/609076/221063415-a48495f8-357b-407d-a87d-2efdb5870ffe.png">
 
-11. Na caixa de texto escrito `Message`, digite sua mensagem de commit. **Não se esqueça dos formatos de mensagem de commit que vimos na aula passada!**
-12. Clique no botão verde `Commit`
-13. Em seguida clique no botão verde `Publish Branch`
-14. Você pode fechar a aba com o Codespaces aberto
-15. Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão.
-16. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
+6.  Na caixa de texto escrito `Message`, digite sua mensagem de commit. **Não se esqueça dos formatos de mensagem de commit que vimos na aula passada!**
+7.  Clique no botão verde `Commit`
+8.  Em seguida clique no botão verde `Publish Branch`
+9.  Uma nova caixa de opções aparecerá no centro da tela, na parte superior. Selecione a opção `origin`.
+10. Você pode fechar a aba com o Codespaces aberto
+11.  Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão. Caso o banner não apareça, continue no passo **12**, caso apareça, vá para o passo **15**
+12. Como o banner não apareceu automaticamente para você, clique no botão verde `New pull request`
+13. Em `base repository`, selecione o main do seu próprio repositório. Por exemplo `joaosilva-dev/octodex-feed-app`, em seguida `main`.
+14. Em `compare`, selecione o branch `dark-mode`. Clique no botão verde `Create pull request`
+15. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
 
 <img width="847" alt="image" src="https://user-images.githubusercontent.com/609076/221065736-287f42bb-034e-4732-8513-714c68c68454.png">
 
 17.  A execução do workflow levará um tempo, isso é o tempo que leva para fazer o deploy do Web App na Azure (máquina menor, do nosso plano gratuito)
 18.  Após terminar a execução, clique no link azul que foi exibido na caixa do job de deploy. Ele te levará para a sua aplicação na Azure (pode levar alguns segundos para processar, pois agora a mesma máquina está sendo utilizada para duas aplicações)
-19.
