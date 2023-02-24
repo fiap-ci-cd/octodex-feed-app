@@ -7,11 +7,16 @@ name: Destroy Azure Web App resources using Terraform
 on:
   workflow_dispatch:
 
+env:
+  TF_WORKING_DIR: ./terraform
+
 jobs:
 
   destroy:
     runs-on: ubuntu-latest
-    environment:
+    defaults:
+      run:
+        working-directory: ${{ env.TF_WORKING_DIR }}
 
     steps:
       - name: Checkout repo
@@ -26,5 +31,10 @@ jobs:
         with:
           terraform_version: 0.14.7
 
-      - name: Move into Terraform folder
-        run: cd terraform
+      - name: Terraform init
+        id: init
+        run: terraform init
+
+      - name: Terraform destroy
+        id: destroy
+        run: terraform destroy -auto-approve

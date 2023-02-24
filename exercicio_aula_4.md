@@ -1,6 +1,6 @@
 # Fazendo o deploy automatizado via Terraform
 
-Nesta aula utilizaremos infraestrutura como código para fazer o deploy da nossa aplicação na Azure. Para isso, utilizaremos o Terraform.
+Nesta aula utilizaremos infraestrutura como código para fazer o deploy da nossa aplicação na Azure. Para isso, utilizaremos o Terraform para o deploy da infraestrutura e GitHub Actions para uma estratégia de deploy _'Blue-Green'.
 
 ## Configurando um 'Service Principal' para o Terraform
 
@@ -30,11 +30,13 @@ Substitua `{subscription-id}` pelo seu subscription id.
 2. Em seguida, clique no workflow de nome `Deploy Azure WebApp resources using Terraform`.
 3. Um banner azul aparecerá no cabeçalho da tela central. Clique em `Run workflow`, em seguida no botão verde `Run workflow`. Como na imagem abaixo:
 
+<img width="373" alt="image" src="https://user-images.githubusercontent.com/609076/221066635-30561393-b467-4d9a-9d4f-29346dba0233.png">
 
 
 ## Ajustando o seu workflow
 
-Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linha 58)** de `octodex` para o nome aleatório gerado pelo Terraform
+Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linhas 66 e 93)** de `octodex` para o nome aleatório gerado pelo Terraform
+- Você pode ver o nome do seu app nos logs da execução de Actions ou fazendo login na Azure
 
 ## Colocando uma mudança em teste
 
@@ -67,6 +69,9 @@ npm run dev
 14. Você pode fechar a aba com o Codespaces aberto
 15. Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão.
 16. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
+
 <img width="847" alt="image" src="https://user-images.githubusercontent.com/609076/221065736-287f42bb-034e-4732-8513-714c68c68454.png">
 
-17. A execução do workflow levará um tempo, isso é o tempo que leva para fazer o deploy do Web App na Azure (máquina menor, do nosso plano gratuito)
+17.  A execução do workflow levará um tempo, isso é o tempo que leva para fazer o deploy do Web App na Azure (máquina menor, do nosso plano gratuito)
+18.  Após terminar a execução, clique no link azul que foi exibido na caixa do job de deploy. Ele te levará para a sua aplicação na Azure (pode levar alguns segundos para processar, pois agora a mesma máquina está sendo utilizada para duas aplicações)
+19.
