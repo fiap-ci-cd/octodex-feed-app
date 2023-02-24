@@ -60,3 +60,11 @@ npm run dev
 ```
 10. Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
 <img width="58" alt="image" src="https://user-images.githubusercontent.com/609076/221063415-a48495f8-357b-407d-a87d-2efdb5870ffe.png">
+11. Na caixa de texto escrito `Message`, digite sua mensagem de commit. **Não se esqueça dos formatos de mensagem de commit que vimos na aula passada!**
+12. Clique no botão verde `Commit`
+13. Em seguida clique no botão verde `Publish Branch`
+14. Você pode fechar a aba com o Codespaces aberto
+15. Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão.
+16. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
+
+17.
