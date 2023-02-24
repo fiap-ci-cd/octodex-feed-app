@@ -35,3 +35,7 @@ Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e subst
 ## Configurando seu repositório para executar Actions
 
 Vá na aba de `Actions` do seu repositório e clique em _'I understand my workflows, go ahead and enable them'_.
+
+## Colocando uma mudança em teste
+
+Para fazer o exercício você vai precisar criar um Codespaces. Na aba `Code`, clique no botão verde 'Code', e em seguida na aba 'Codespaces', clique no ícone de `+`.
