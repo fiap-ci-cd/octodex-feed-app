@@ -38,4 +38,25 @@ Vá na aba de `Actions` do seu repositório e clique em _'I understand my workfl
 
 ## Colocando uma mudança em teste
 
-Para fazer o exercício você vai precisar criar um Codespaces. Na aba `Code`, clique no botão verde 'Code', e em seguida na aba 'Codespaces', clique no ícone de `+`.
+1. Para fazer o exercício você vai precisar criar um Codespaces. Na aba `Code`, clique no botão verde 'Code', e em seguida na aba 'Codespaces', clique no ícone de `+`.
+2. Você verá que uma nova aba será aberta e, após carregar, o Visual Studio Code será aberto.
+3. No canto superior esquerdo, clique no ícone do menu (ícone com três barras horizontais paralelas), vá em `Terminal` > `New Terminal`.
+4. Um terminal aparecerá na parte inferior direita da sua tela. Execute o seguinte comando:
+```bash
+npm run dev
+```
+5. Após os logs, clique no link (CTRL+clique) `https://localhost:3000`.
+
+Essa é a aplicação com a qual queremos trabalhar. Se você utilizar o seu computador em modo noturno, ela terá o fundo escuro, caso utilize no modo claro, ela terá o fundo branco. O que queremos fazer, é dar ao usuário a opção de escolher, manualmente, qual modo deseja usar. Por isso vamos fazer uma modificação no código.
+
+Todo o código necessário já está pronto. Para isso, basta executar uma tarefa do VS Code.
+
+6. No mesmo menu superior esquerdo, selectione `Terminal` > `Run task...`.
+7. No centro da tela, na parte superior, aparecerá um campo de input. Selecione a opção `code dark mode toggle`.
+8. Em seguida aparecerá a opção para você inserir o nome do branch que será criado automaticamente. Virá preenchido automaticamente `dark-mode`. Apenas aperte `Enter`.
+9. Execute novamente o comando do passo 4. E veja que apareceu um ícone após o cabeçalho. Clique no ícone e veja o estilo do app ser alterado.
+```bash
+npm run dev
+```
+10. Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
+<img width="58" alt="image" src="https://user-images.githubusercontent.com/609076/221063415-a48495f8-357b-407d-a87d-2efdb5870ffe.png">
