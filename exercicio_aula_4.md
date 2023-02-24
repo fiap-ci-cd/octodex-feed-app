@@ -19,22 +19,22 @@ Substitua `{subscription-id}` pelo seu subscription id.
 :attention: O seu 'Subscription ID' pode ser encontrado no portal da Azure, na aba 'Subscriptions'.
 
 5. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado.
-
 6. Copie o valor de `appId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
-
 7. Copie o valor de `password` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
-
 8. Copie o valor de `tenant` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
-
 9. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
+
+## Configurando seu repositório para executar Actions
+
+1. Vá na aba de `Actions` do seu repositório e clique em _'I understand my workflows, go ahead and enable them'_.
+2. Em seguida, clique no workflow de nome `Deploy Azure WebApp resources using Terraform`.
+3. Um banner azul aparecerá no cabeçalho da tela central. Clique em `Run workflow`, em seguida no botão verde `Run workflow`. Como na imagem abaixo:
+
+
 
 ## Ajustando o seu workflow
 
 Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linha 58)** de `octodex` para o nome aleatório gerado pelo Terraform
-
-## Configurando seu repositório para executar Actions
-
-Vá na aba de `Actions` do seu repositório e clique em _'I understand my workflows, go ahead and enable them'_.
 
 ## Colocando uma mudança em teste
 
@@ -60,11 +60,13 @@ npm run dev
 ```
 10. Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
 <img width="58" alt="image" src="https://user-images.githubusercontent.com/609076/221063415-a48495f8-357b-407d-a87d-2efdb5870ffe.png">
+
 11. Na caixa de texto escrito `Message`, digite sua mensagem de commit. **Não se esqueça dos formatos de mensagem de commit que vimos na aula passada!**
 12. Clique no botão verde `Commit`
 13. Em seguida clique no botão verde `Publish Branch`
 14. Você pode fechar a aba com o Codespaces aberto
 15. Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão.
 16. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
+<img width="847" alt="image" src="https://user-images.githubusercontent.com/609076/221065736-287f42bb-034e-4732-8513-714c68c68454.png">
 
-17.
+17. A execução do workflow levará um tempo, isso é o tempo que leva para fazer o deploy do Web App na Azure (máquina menor, do nosso plano gratuito)
