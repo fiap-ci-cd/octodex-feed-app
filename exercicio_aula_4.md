@@ -12,16 +12,16 @@ Para que o Terraform possa se comunicar com a Azure, precisamos criar um 'Servic
 4. Execute o comando abaixo para criar um 'Service Principal' com permissões de acesso à sua conta:
 
 ```bash
-   az ad sp create-for-rbac --name "myApp" --role contributor --scopes /subscriptions/{subscription-id}
+   az ad sp create-for-rbac --name "myApp" --role contributor --scopes /subscriptions/{subscription-id} --sdk-auth
 ```
 Substitua `{subscription-id}` pelo seu subscription id.
 
 :attention: O seu 'Subscription ID' pode ser encontrado no portal da Azure, na aba 'Subscriptions'.
 
 5. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado.
-6. Copie o valor de `appId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
-7. Copie o valor de `password` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
-8. Copie o valor de `tenant` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
+6. Copie o valor de `clientId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
+7. Copie o valor de `clientSecret` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
+8. Copie o valor de `tenantId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
 9. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
 
 ## Configurando seu repositório para executar Actions
