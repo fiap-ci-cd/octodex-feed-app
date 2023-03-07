@@ -4,25 +4,27 @@ Nesta aula utilizaremos infraestrutura como código para fazer o deploy da nossa
 
 ## Configurando um 'Service Principal' para o Terraform
 
-Para que o Terraform possa se comunicar com a Azure, precisamos criar um 'Service Principal' com permissões de acesso à nossa conta. Para isso, siga os passos abaixo:
+Para que o Terraform possa se comunicar com a Azure, precisamos criar um 'Service Principal' com permissões de acesso à nossa conta. Com a nossa conta atual da FIAP, não temos permissão para criar o Service Principal pela interface, por isso precisamos usar a linha de comando (Cloud Shell). Para isso, siga os passos abaixo:
 
 1. Acesse o portal da Azure e clique no ícone do terminal no canto superior direito da tela.
-2. Clique em 'Create storage' e crie um novo storage account.
-3. Espere o terminal ser criado
-4. Execute o comando abaixo para criar um 'Service Principal' com permissões de acesso à sua conta:
+2. Clique em 'Show advanced settings'
+3. Clique em 'US East' e selecione outra região (ex: 'US West 2', seja criativo)
+   - :rotating_light: **Este passo é importante que cada aluno utilize uma região diferente, pois o Azure tem limites de recursos por região. Se todos utilizarem a mesma região, pode ser que algum aluno não consiga criar o Service Principal.**
+4. Em 'Storage account', selecione 'Create new' e digite um nome para o storage account. Ex: `storageaccountfiap`
+5. Em 'File share', selecione 'Create new' e digite um nome para o file share. Ex: `filesharefiap`
+6. Clique em 'Create storage' e crie um novo storage account.
+7. Espere o terminal ser criado
+8. Execute o comando abaixo para criar um 'Service Principal' com permissões de acesso à sua conta:
 
 ```bash
-   az ad sp create-for-rbac --name "myApp" --role contributor --scopes /subscriptions/{subscription-id}
+   az ad sp create-for-rbac --name "appCICD" --role contributor --scopes /subscriptions/5b6bad70-73b5-46bf-aef7-0609a8828598 --sdk-auth
 ```
-Substitua `{subscription-id}` pelo seu subscription id.
 
-:attention: O seu 'Subscription ID' pode ser encontrado no portal da Azure, na aba 'Subscriptions'.
-
-5. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado.
-6. Copie o valor de `appId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
-7. Copie o valor de `password` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
-8. Copie o valor de `tenant` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
-9. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
+1. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado.
+2. Copie o valor de `clientId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
+3. Copie o valor de `clientSecret` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_SECRET` e o valor copiado.
+4. Copie o valor de `tenantId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_TENANT_ID` e o valor copiado.
+5. Crie um secret com o nome `ARM_SUBSCRIPTION_ID` e o valor do seu subscription id.
 
 ## Configurando seu repositório para executar Actions
 
