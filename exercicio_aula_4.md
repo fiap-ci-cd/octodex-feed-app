@@ -38,7 +38,7 @@ Para que o Terraform possa se comunicar com a Azure, precisamos criar um 'Servic
 
 ## Ajustando o seu workflow
 
-Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linhas 66 e 93)** de `octodex` para o nome aleatório gerado pelo Terraform
+Na pasta `.github/workflows`, abra o arquivo `main_exercicio-aula-4.yml` e substitua o valor do `app-name` **(linhas 68 e 95)** de `octodex` para o nome aleatório gerado pelo Terraform
 - Você pode ver o nome do seu app nos logs da execução de Actions ou fazendo login na Azure. O nome será algo parecido com `exercicio-04-g4qKK0yDGDHdfLyA`
 
 ## Colocando uma mudança em teste
