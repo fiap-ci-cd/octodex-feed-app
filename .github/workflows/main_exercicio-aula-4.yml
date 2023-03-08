@@ -65,7 +65,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'octodex'
+          app-name: 'exercicio-04-qCPwt94AZjjCJtvM'
           slot-name: 'production'
           package: ./node-app.zip
 
@@ -92,6 +92,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'octodex'
+          app-name: 'exercicio-04-qCPwt94AZjjCJtvM'
           slot-name: 'dark-mode'
           package: ./node-app.zip
