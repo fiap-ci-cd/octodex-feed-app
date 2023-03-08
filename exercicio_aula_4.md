@@ -8,13 +8,14 @@ Para que o Terraform possa se comunicar com a Azure, precisamos criar um 'Servic
 
 1. Acesse o portal da Azure e clique no ícone do terminal no canto superior direito da tela.
 2. Clique em 'Show advanced settings'
-3. Clique em 'US East' e selecione outra região (ex: 'US West 2', seja criativo)
+3. Em 'Resource group', selecione 'Create new' e digite um nome para o resource group. Ex: `rgfiap`
+4. Clique em 'US East' e selecione outra região (ex: 'US West 2', seja criativo)
    - :rotating_light: **Este passo é importante que cada aluno utilize uma região diferente, pois o Azure tem limites de recursos por região. Se todos utilizarem a mesma região, pode ser que algum aluno não consiga criar o Service Principal.**
-4. Em 'Storage account', selecione 'Create new' e digite um nome para o storage account. Ex: `storageaccountfiap`
-5. Em 'File share', selecione 'Create new' e digite um nome para o file share. Ex: `filesharefiap`
-6. Clique em 'Create storage' e crie um novo storage account.
-7. Espere o terminal ser criado
-8. Execute o comando abaixo para criar um 'Service Principal' com permissões de acesso à sua conta:
+5. Em 'Storage account', selecione 'Create new' e digite um nome para o storage account. Ex: `storageaccountfiap`
+6. Em 'File share', selecione 'Create new' e digite um nome para o file share. Ex: `filesharefiap`
+7. Clique em 'Create storage' e crie um novo storage account.
+8. Espere o terminal ser criado
+9. Execute o comando abaixo para criar um 'Service Principal' com permissões de acesso à sua conta:
 
 ```bash
    az ad sp create-for-rbac --name "appCICD" --role contributor --scopes /subscriptions/<subscription-id> --sdk-auth
