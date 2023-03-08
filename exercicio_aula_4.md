@@ -65,24 +65,27 @@ Todo o código necessário já está pronto. Para isso, basta executar uma taref
 2. No centro da tela, na parte superior, aparecerá um campo de input. Selecione a opção `code dark mode toggle`.
 3. Em seguida aparecerá a opção para você inserir o nome do branch que será criado automaticamente. Virá preenchido automaticamente `dark-mode`. Apenas aperte `Enter`.
 4. Execute novamente o comando do passo 4. E veja que apareceu um ícone após o cabeçalho. Clique no ícone e veja o estilo do app ser alterado.
+
 ```bash
 npm run dev
 ```
-5.  Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
+
+1.  Perfeito. Alteração pronta, vamos enviar as modificações para o GitHub. No menu esquerdo, selecione o ícone do Git. É um gráfico com uma ramificação, veja abaixo:
 <img width="58" alt="image" src="https://user-images.githubusercontent.com/609076/221063415-a48495f8-357b-407d-a87d-2efdb5870ffe.png">
 
-6.  Na caixa de texto escrito `Message`, digite sua mensagem de commit. **Não se esqueça dos formatos de mensagem de commit que vimos na aula passada!**
-7.  Clique no botão verde `Commit`
-8.  Em seguida clique no botão verde `Publish Branch`
-9.  Uma nova caixa de opções aparecerá no centro da tela, na parte superior. Selecione a opção `origin`.
-10. Você pode fechar a aba com o Codespaces aberto
-11.  Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão. Caso o banner não apareça, continue no passo **12**, caso apareça, vá para o passo **15**
-12. Como o banner não apareceu automaticamente para você, clique no botão verde `New pull request`
-13. Em `base repository`, selecione o main do seu próprio repositório. Por exemplo `joaosilva-dev/octodex-feed-app`, em seguida `main`.
-14. Em `compare`, selecione o branch `dark-mode`. Clique no botão verde `Create pull request`
-15. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
+1.  Na caixa de texto escrito `Message`, digite sua mensagem de commit. **Não se esqueça dos formatos de mensagem de commit que vimos na aula passada!**
+2.  Clique no botão verde `Commit`
+3.  Em seguida clique no botão verde `Publish Branch`
+4.  Uma nova caixa de opções aparecerá no centro da tela, na parte superior. Selecione a opção `origin`.
+5.  Você pode fechar a aba com o Codespaces aberto
+6.   Volte para o GitHub, na aba `Pull requests`. Você verá um banner amarelo com um botão verde escrito `Compare & pull request`. Clique no botão. Caso o banner não apareça, continue no passo **12**, caso apareça, vá para o passo **15**
+7.  Como o banner não apareceu automaticamente para você, clique no botão verde `New pull request`
+8.  Em `base repository`, selecione o main do seu próprio repositório. Por exemplo `joaosilva-dev/octodex-feed-app`, em seguida `main`.
+9.  Em `compare`, selecione o branch `dark-mode`. Clique no botão verde `Create pull request`
+10. Clique no botão verde abaixo da caixa de texto `Create pull request`. (Opcional) você pode criar uma mensagem descrevendo as mudanças que você está implementando. Assim que clicar no botão, as validações começarão a rodar. Serão executados builds, testes e um deploy do app para um slot da Azure. Para verificarmos se ele estará entregue conforme desenvolvemos. Você verá algo como abaixo:
 
 <img width="847" alt="image" src="https://user-images.githubusercontent.com/609076/221065736-287f42bb-034e-4732-8513-714c68c68454.png">
 
 17.  A execução do workflow levará um tempo, isso é o tempo que leva para fazer o deploy do Web App na Azure (máquina menor, do nosso plano gratuito)
 18.  Após terminar a execução, clique no link azul que foi exibido na caixa do job de deploy. Ele te levará para a sua aplicação na Azure (pode levar alguns segundos para processar, pois agora a mesma máquina está sendo utilizada para duas aplicações)
+19.  Agora, vamos fazer o merge da nossa branch `dark-mode` para a `main`. Para isso, vá na aba `Pull requests` e clique no botão verde `Merge pull request`
