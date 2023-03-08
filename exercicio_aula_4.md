@@ -18,9 +18,10 @@ Para que o Terraform possa se comunicar com a Azure, precisamos criar um 'Servic
 9. Execute o comando abaixo para criar um 'Service Principal' com permissões de acesso à sua conta:
 
 ```bash
-   az ad sp create-for-rbac --name "appCICD" --role contributor --scopes /subscriptions/<subscription-id> --sdk-auth
+   az ad sp create-for-rbac --name "appCICD<seuRM>" --role contributor --scopes /subscriptions/<subscription-id> --sdk-auth
 ```
 :rotating_light: **Substitua o `<subscription-id>` pelo seu subscription id. Você pode encontrar o seu subscription id na página de 'Subscriptions' do portal da Azure.**
+:rotating_light: **Substitua o `<seuRM>` pelo seu RM. Ex: `appCICD12345`**
 
 1. Copie o resultado e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `AZURE_CREDENTIALS` e o valor copiado.
 2. Copie o valor de `clientId` e salve como um Secret no seu repositório do GitHub. Para isso, vá até a aba 'Settings' do seu repositório, clique em 'Secrets' e crie um novo secret com o nome `ARM_CLIENT_ID` e o valor copiado.
